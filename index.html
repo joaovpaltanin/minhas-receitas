@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Minhas Receitas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Minhas Receitas</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar receitas...">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="recipes-grid" id="recipesGrid"></div>
+        <div class="no-results" id="noResults" style="display: none;">
+            Nenhuma receita encontrada
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+
+                <div class="section">
+                    <h3 class="section-title">Ingredientes</h3>
+                    <ul class="ingredients-list" id="modalIngredients"></ul>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-title">Modo de Preparo</h3>
+                    <div class="instructions" id="modalInstructions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
