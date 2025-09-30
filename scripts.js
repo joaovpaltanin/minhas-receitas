@@ -3,6 +3,7 @@ const recipes = [
         id: 1,
         name: "Bolo de Chocolate",
         image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop",
+        youtubeLink: "https://www.youtube.com/watch?v=exemplo1",
         ingredients: [
             "2 xícaras de farinha de trigo",
             "1 xícara de chocolate em pó",
@@ -28,6 +29,7 @@ const recipes = [
         id: 2,
         name: "Lasanha à Bolonhesa",
         image: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop",
+        youtubeLink: "",
         ingredients: [
             "500g de massa para lasanha",
             "500g de carne moída",
@@ -54,6 +56,7 @@ const recipes = [
         id: 3,
         name: "Salada Caesar",
         image: "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop",
+        youtubeLink: "https://www.youtube.com/watch?v=exemplo3",
         ingredients: [
             "1 pé de alface romana",
             "100g de queijo parmesão",
@@ -91,14 +94,21 @@ function renderRecipes(recipesToRender) {
     noResults.style.display = 'none';
 
     grid.innerHTML = recipesToRender.map(recipe => `
-                <div class="recipe-card" onclick="openModal(${recipe.id})">
-                    <img class="recipe-image" src="${recipe.image}" alt="${recipe.name}">
-                    <div class="recipe-info">
-                        <div class="recipe-name">${recipe.name}</div>
-                        <div class="recipe-preview">${recipe.ingredients.length} ingredientes</div>
-                    </div>
-                </div>
-            `).join('');
+    <div class="recipe-card" onclick="openModal(${recipe.id})">
+        ${recipe.youtubeLink ? `
+            <a class="youtube-icon" href="${recipe.youtubeLink}" target="_blank" onclick="event.stopPropagation()">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                </svg>
+            </a>
+        ` : ''}
+        <img class="recipe-image" src="${recipe.image}" alt="${recipe.name}">
+        <div class="recipe-info">
+            <div class="recipe-name">${recipe.name}</div>
+            <div class="recipe-preview">${recipe.ingredients.length} ingredientes</div>
+        </div>
+    </div>
+    `).join('');
 }
 
 function openModal(recipeId) {
@@ -115,6 +125,10 @@ function openModal(recipeId) {
     ).join('');
 
     document.getElementById('modalInstructions').textContent = recipe.instructions;
+
+    const youtubeLink = document.getElementById('modalYoutubeLink');
+    youtubeLink.href = recipe.youtubeLink;
+
     document.getElementById('modal').style.display = 'block';
 }
 
