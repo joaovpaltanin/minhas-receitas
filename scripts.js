@@ -1,83 +1,103 @@
 const recipes = [
     {
         id: 1,
-        name: "Bolo de Chocolate",
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop",
-        youtubeLink: "https://www.youtube.com/watch?v=exemplo1",
+        name: "Pudim de leite lisinho",
+        image: "https://www.receitas-sem-fronteiras.com/uploads/media/pudim1-2.jpg?1396283305",
+        youtubeLink: "https://www.youtube.com/watch?v=nG_wLMfEtBI",
         ingredients: [
-            "2 xícaras de farinha de trigo",
-            "1 xícara de chocolate em pó",
-            "2 xícaras de açúcar",
-            "3 ovos",
-            "1 xícara de leite",
-            "1/2 xícara de óleo",
-            "1 colher de sopa de fermento em pó"
+            "2 latas de leite condensado",
+            "4 ovos",
+            "2½ xícaras de chá de leite",
+            "1 xícara de chá de açúcar",
+            "⅓ de xícara de chá de água fervente"
         ],
-        instructions: `1. Pré-aqueça o forno a 180°C e unte uma forma.
+        instructions: `1. Pré-aqueça o forno a 160 °C.
 
-2. Em uma tigela, misture os ingredientes secos: farinha, chocolate em pó, açúcar e fermento.
+2. Em uma tigela, misture delicadamente os ovos, o leite condensado e o leite, evitando formar bolhas de ar. Reserve e deixe a massa descansar.
 
-3. Em outra tigela, bata os ovos, adicione o leite e o óleo.
+3. Em uma panela, derreta o açúcar em fogo baixo até formar um caramelo dourado. Adicione com cuidado a água fervente e mexa até ficar homogêneo.
 
-4. Misture os ingredientes líquidos aos secos até obter uma massa homogênea.
+4. Espalhe o caramelo em uma forma com furo no meio (cerca de 22 cm), cobrindo fundo e laterais. Deixe esfriar por 10 minutos.
 
-5. Despeje a massa na forma e leve ao forno por aproximadamente 40 minutos.
+5. Passe a massa do pudim por uma peneira e despeje sobre o caramelo.
 
-6. Faça o teste do palito antes de retirar do forno.`
+6. Coloque a forma dentro de uma assadeira maior e adicione água quente até a metade da altura da forma, formando um banho-maria.
+
+7. Leve ao forno e asse por cerca de 1h30, até o pudim firmar nas bordas e estar levemente cremoso no centro.
+
+8. Retire do forno, deixe esfriar e leve à geladeira por pelo menos 3 horas.
+
+9. Para desenformar, aqueça levemente o fundo da forma no fogo, cubra com um prato e vire de uma só vez.
+
+10. Sirva gelado com a calda por cima.`
     },
     {
         id: 2,
-        name: "Lasanha à Bolonhesa",
-        image: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400&h=300&fit=crop",
-        youtubeLink: "",
+        name: "Risoto de Limão Siciliano",
+        image: "https://bakeandcakegourmet.com.br/uploads/site/receitas/captura-de-tela-2024-11-11-as-113558-txyfbdog.png",
+        youtubeLink: "https://www.youtube.com/watch?v=tyYDJAlXQ3c",
         ingredients: [
-            "500g de massa para lasanha",
-            "500g de carne moída",
+            "2 xícaras de arroz arbóreo",
+            "1,5 litro de caldo de legumes quente",
             "1 cebola picada",
-            "2 dentes de alho",
-            "500ml de molho de tomate",
-            "500ml de molho branco",
-            "200g de queijo mussarela",
-            "Sal e pimenta a gosto"
+            "1 talo de alho-poró (ou parte) fatiado",
+            "1 talo de salsão picado",
+            "½ xícara de vinho branco seco",
+            "1 gema de ovo",
+            "Raspas de 1 limão siciliano",
+            "Suco de 1 limão siciliano",
+            "2 colheres de sopa de manteiga",
+            "2 colheres de sopa de azeite",
+            "1 xícara de queijo parmesão ralado",
+            "Sal e pimenta-do-reino a gosto",
+            "Salsinha picada para finalizar",
+            "Rodelas de limão siciliano grelhadas (opcional)"
         ],
-        instructions: `1. Refogue a cebola e o alho, adicione a carne moída e tempere.
+        instructions: `1. Prepare e mantenha o caldo de legumes aquecido durante todo o preparo.
 
-2. Acrescente o molho de tomate e deixe cozinhar por 15 minutos.
+2. Em uma panela grande, aqueça o azeite e 1 colher de manteiga. Adicione o salsão, a cebola e o alho-poró, refogando até que fiquem macios.
 
-3. Cozinhe a massa da lasanha conforme instruções da embalagem.
+3. Acrescente o arroz arbóreo e misture por alguns minutos, envolvendo os grãos.
 
-4. Em um refratário, alterne camadas de massa, molho bolonhesa, molho branco e queijo.
+4. Despeje o vinho branco e mexa até evaporar.
 
-5. Finalize com queijo mussarela por cima.
+5. Comece a adicionar o caldo quente, uma concha por vez, mexendo sempre, esperando que parte do líquido seja absorvido antes de colocar mais.
 
-6. Leve ao forno pré-aquecido a 200°C por 30 minutos até dourar.`
+6. Quando estiver quase no ponto (al dente), adicione o suco de limão e as raspas, continuando a regar com mais caldo se necessário.
+
+7. Desligue o fogo antes que o arroz fique seco. Acrescente o restante da manteiga, o queijo parmesão e a mistura de gema, limão e queijo (previamente misturada). Misture bem até ficar cremoso.
+
+8. Ajuste o sal e a pimenta. Sirva imediatamente, com salsinha picada e rodelas de limão grelhadas se desejar.`
     },
     {
         id: 3,
-        name: "Salada Caesar",
-        image: "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop",
-        youtubeLink: "https://www.youtube.com/watch?v=exemplo3",
+        name: "Bolo Fit de Aveia com Cacau e Canela",
+        image: "https://imgs.search.brave.com/6R46YHvanZOn-Nmjk8zRnCk7y-ncZNekAvdSOi4vu80/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zYWJv/cmVtbW92aW1lbnRv/LmNvbS5ici93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wMS9C/b2xvLUZpdC1kZS1C/YW5hbmEtY29tLUF2/ZWlhLXNhdWRhdmVs/LmpwZw",
+        youtubeLink: "https://www.youtube.com/shorts/_QOv8xbqzCo?feature=share",
         ingredients: [
-            "1 pé de alface romana",
-            "100g de queijo parmesão",
-            "200g de peito de frango",
-            "Croutons",
-            "Molho caesar",
-            "Suco de limão",
-            "Azeite de oliva"
+            "3 bananas maduras",
+            "3 ovos",
+            "1/5 de xícara de óleo",
+            "2 xícaras de aveia",
+            "1 colher de sopa de fermento em pó",
+            "1 colher de chá de canela em pó",
+            "2 colheres de sopa de cacau em pó 100%",
+            "1 colher de chá de essência de baunilha",
+            "1/3 de xícara de gotas de chocolate meio amargo"
         ],
-        instructions: `1. Lave e rasgue as folhas de alface em pedaços médios.
+        instructions: `1. Pré-aqueça o forno a 180 °C e unte uma forma média com óleo ou forre com papel manteiga.
 
-2. Tempere o frango com sal e pimenta, grelhe até cozinhar completamente.
+2. Em um liquidificador ou tigela grande, adicione as bananas, os ovos, o óleo e a essência de baunilha. Bata até obter uma mistura cremosa e homogênea.
 
-3. Corte o frango em tiras finas.
+3. Acrescente a aveia, a canela e o cacau em pó e misture bem até formar uma massa consistente.
 
-4. Em uma saladeira, misture a alface, o frango, os croutons.
+4. Por último, adicione o fermento e as gotas de chocolate e mexa delicadamente apenas para incorporar.
 
-5. Adicione o molho caesar e misture delicadamente.
+5. Despeje a massa na forma e leve ao forno por cerca de 30 a 35 minutos, ou até que o bolo esteja dourado e firme ao toque. Faça o teste do palito para verificar o ponto.
 
-6. Finalize com lascas de queijo parmesão e sirva imediatamente.`
+6. Retire do forno, deixe esfriar e desenforme. Sirva em seguida ou guarde em pote fechado por até 3 dias.`
     }
+
 ];
 
 function renderRecipes(recipesToRender) {
