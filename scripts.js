@@ -96,8 +96,43 @@ const recipes = [
 5. Despeje a massa na forma e leve ao forno por cerca de 30 a 35 minutos, ou até que o bolo esteja dourado e firme ao toque. Faça o teste do palito para verificar o ponto.
 
 6. Retire do forno, deixe esfriar e desenforme. Sirva em seguida ou guarde em pote fechado por até 3 dias.`
-    }
+    },
+    {
+        id: 4,
+        name: "Fricassê de Frango",
+        image: "https://www.kisabor.com.br/img/receitas/fricasse-1628262666.webp",
+        youtubeLink: "https://www.youtube.com/shorts/Y92iygk7x00",
+        ingredients: [
+            "500g de peito de frango cozido e desfiado",
+            "1 lata de creme de leite",
+            "200g de milho verde",
+            "200g de ervilha",
+            "1 cebola picada",
+            "2 dentes de alho picados",
+            "2 colheres de sopa de azeite",
+            "Sal e pimenta-do-reino a gosto",
+            "Cheiro-verde a gosto",
+            "100g de batata palha para cobertura",
+            "100g de queijo parmesão ralado"
+        ],
+        instructions: `1. Em uma panela grande, aqueça o azeite e refogue a cebola e o alho até ficarem dourados.
 
+2. Adicione o frango desfiado e refogue por alguns minutos, temperando com sal e pimenta-do-reino.
+
+3. Acrescente o milho e a ervilha, misturando bem todos os ingredientes.
+
+4. Adicione o creme de leite e misture até ficar cremoso e homogêneo. Cozinhe por mais 5 minutos em fogo baixo.
+
+5. Ajuste o sal e finalize com cheiro-verde picado.
+
+6. Transfira o fricassê para um refratário.
+
+7. Cubra com a batata palha e polvilhe o queijo parmesão ralado por cima.
+
+8. Leve ao forno pré-aquecido a 180°C por cerca de 15 minutos, ou até que a batata palha fique levemente dourada e o queijo gratinado.
+
+9. Sirva quente acompanhado de arroz branco.`
+    }
 ];
 
 function renderRecipes(recipesToRender) {
