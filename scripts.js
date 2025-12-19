@@ -132,6 +132,36 @@ const recipes = [
 8. Leve ao forno pré-aquecido a 180°C por cerca de 15 minutos, ou até que a batata palha fique levemente dourada e o queijo gratinado.
 
 9. Sirva quente acompanhado de arroz branco.`
+    },
+    {
+        id: 5,
+        name: "Pão de Tapioca",
+        image: "https://www.guacira.com.br/images/receitas/0170672001623938582.webp",
+        youtubeLink: "https://www.youtube.com/shorts/-D2KRmvT1R0",
+        ingredients: [
+            "1 xícara de tapioca",
+            "1 xícara de leite",
+            "1 colher de sopa de fermento em pó",
+            "2 colheres de sopa de manteiga derretida",
+            "1 colher de chá de sal",
+            "½ xícara de queijo ralado (opcional)",
+            "1 colher de chá de açúcar"
+        ],
+        instructions: `1. Pré-aqueça o forno a 200°C.
+
+2. Em uma tigela, misture a tapioca com o leite e deixe descansar por 5 minutos.
+
+3. Adicione a manteiga derretida, o sal e o açúcar à mistura.
+
+4. Incorpore o fermento em pó e o queijo ralado (se estiver usando) e misture bem.
+
+5. Despeje a massa em uma forma redonda ou quadrada untada com manteiga.
+
+6. Leve ao forno por aproximadamente 25 a 30 minutos, até ficar dourada e firme.
+
+7. Retire do forno e deixe esfriar um pouco antes de desenformar.
+
+8. Sirva ainda morno.`
     }
 ];
 
