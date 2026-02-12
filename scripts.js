@@ -2,8 +2,8 @@ const recipes = [
     {
         id: 1,
         name: "Pudim de leite lisinho",
-        image: "https://www.receitas-sem-fronteiras.com/uploads/media/pudim1-2.jpg?1396283305",
-        youtubeLink: "https://www.youtube.com/watch?v=nG_wLMfEtBI",
+        image: "https://receitadesabor.com.br/wp-content/uploads/2025/12/Receita-de-Pudim-Lisinho-Que-Derrete-na-Boca.webp",
+        mediaLink: "https://www.youtube.com/watch?v=nG_wLMfEtBI",
         ingredients: [
             "2 latas de leite condensado",
             "4 ovos",
@@ -35,7 +35,7 @@ const recipes = [
         id: 2,
         name: "Risoto de Limão Siciliano",
         image: "https://bakeandcakegourmet.com.br/uploads/site/receitas/captura-de-tela-2024-11-11-as-113558-txyfbdog.png",
-        youtubeLink: "https://www.youtube.com/watch?v=tyYDJAlXQ3c",
+        mediaLink: "https://www.youtube.com/watch?v=tyYDJAlXQ3c",
         ingredients: [
             "2 xícaras de arroz arbóreo",
             "1,5 litro de caldo de legumes quente",
@@ -73,7 +73,7 @@ const recipes = [
         id: 3,
         name: "Bolo Fit de Aveia com Cacau e Canela",
         image: "https://imgs.search.brave.com/6R46YHvanZOn-Nmjk8zRnCk7y-ncZNekAvdSOi4vu80/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zYWJv/cmVtbW92aW1lbnRv/LmNvbS5ici93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wMS9C/b2xvLUZpdC1kZS1C/YW5hbmEtY29tLUF2/ZWlhLXNhdWRhdmVs/LmpwZw",
-        youtubeLink: "https://www.youtube.com/shorts/_QOv8xbqzCo?feature=share",
+        mediaLink: "https://www.youtube.com/shorts/_QOv8xbqzCo?feature=share",
         ingredients: [
             "3 bananas maduras",
             "3 ovos",
@@ -101,7 +101,7 @@ const recipes = [
         id: 4,
         name: "Fricassê de Frango",
         image: "https://www.kisabor.com.br/img/receitas/fricasse-1628262666.webp",
-        youtubeLink: "https://www.youtube.com/shorts/Y92iygk7x00",
+        mediaLink: "https://www.youtube.com/shorts/Y92iygk7x00",
         ingredients: [
             "500g de peito de frango cozido e desfiado",
             "1 lata de creme de leite",
@@ -137,7 +137,7 @@ const recipes = [
         id: 5,
         name: "Pão de Tapioca",
         image: "https://www.guacira.com.br/images/receitas/0170672001623938582.webp",
-        youtubeLink: "https://www.youtube.com/shorts/-D2KRmvT1R0",
+        mediaLink: "https://www.youtube.com/shorts/-D2KRmvT1R0",
         ingredients: [
             "1 xícara de tapioca",
             "1 xícara de leite",
@@ -162,6 +162,33 @@ const recipes = [
 7. Retire do forno e deixe esfriar um pouco antes de desenformar.
 
 8. Sirva ainda morno.`
+    },
+    {
+        id: 6,
+        name: "Maçã Folhada",
+        image: "https://guiadacozinha.com.br/wp-content/uploads/2019/10/tortinha-folhada-ma%C3%A7%C3%A3.jpg",
+        mediaLink: "https://www.facebook.com/share/r/1GRMD5kqB3/",
+        ingredients: [
+            "1 maçã vermelha grande",
+            "400 gr de massa folhada ou massa de pastel",
+            "Canela a gosto",
+            "Açúcar de confeiteiro a gosto"
+        ],
+        instructions: `1. Se estiver usando massa de pastel, una a massa com manteiga antes de colocar a maçã.
+
+2. Prepare a massa folhada ou de pastel sobre uma superfície de trabalho.
+
+3. Descasque a maçã e corte em espiral ou em fatias finas, mantendo uma forma circular ou em espiral.
+
+4. Coloque a maçã sobre a massa folhada.
+
+5. Polvilhe generosamente canela e açúcar de confeiteiro sobre a maçã.
+
+6. Asse em forno pré-aquecido a 200°C por cerca de 20 minutos, se estiver usando massa folhada. Se for massa de pastel, asse por 15 minutos, até ficar dourada.
+
+7. Retire do forno quando estiver crocante e dourada.
+
+8. Sirva morno ou em temperatura ambiente.`
     }
 ];
 
@@ -180,8 +207,8 @@ function renderRecipes(recipesToRender) {
 
     grid.innerHTML = recipesToRender.map(recipe => `
     <div class="recipe-card" onclick="openModal(${recipe.id})">
-        ${recipe.youtubeLink ? `
-            <a class="youtube-icon" href="${recipe.youtubeLink}" target="_blank" onclick="event.stopPropagation()">
+        ${recipe.mediaLink ? `
+            <a class="media-icon" href="${recipe.mediaLink}" target="_blank" onclick="event.stopPropagation()">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                 </svg>
@@ -211,8 +238,8 @@ function openModal(recipeId) {
 
     document.getElementById('modalInstructions').textContent = recipe.instructions;
 
-    const youtubeLink = document.getElementById('modalYoutubeLink');
-    youtubeLink.href = recipe.youtubeLink;
+    const mediaLink = document.getElementById('modalMediaLink');
+    mediaLink.href = recipe.mediaLink;
 
     document.getElementById('modal').style.display = 'block';
 }

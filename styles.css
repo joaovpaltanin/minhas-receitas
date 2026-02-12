@@ -93,7 +93,7 @@ h1 {
     color: #7f8c8d;
 }
 
-.youtube-icon {
+.media-icon {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
@@ -109,11 +109,11 @@ h1 {
     z-index: 10;
 }
 
-.youtube-icon:hover {
+.media-icon:hover {
     background: #cc0000;
 }
 
-.youtube-icon svg {
+.media-icon svg {
     width: 20px;
     height: 20px;
     fill: #fff;
@@ -216,7 +216,7 @@ h1 {
     line-height: 1.8;
 }
 
-.youtube-btn {
+.media-btn {
     display: inline-block;
     background: #ff0000;
     color: #fff;
@@ -227,7 +227,7 @@ h1 {
     transition: background 0.2s;
 }
 
-.youtube-btn:hover {
+.media-btn:hover {
     background: #cc0000;
 }
 
