@@ -8,49 +8,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <title>Minhas Receitas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <h1>Minhas Receitas</h1>
+        <div class="container header-inner">
+            <div class="header-text">
+                <h1>Minhas Receitas</h1>
+                <p class="subtitle">Delícias caseiras feitas com carinho</p>
+            </div>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Buscar receitas...">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Buscar por nome ou ingrediente...">
             </div>
         </div>
     </header>
 
-    <div class="container">
+    <main class="container">
         <div class="recipes-grid" id="recipesGrid"></div>
         <div class="no-results" id="noResults" style="display: none;">
-            Nenhuma receita encontrada
+            <svg class="no-results-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="8" y1="8" x2="14" y2="14"></line>
+                <line x1="14" y1="8" x2="8" y2="14"></line>
+            </svg>
+            <p>Nenhuma receita encontrada</p>
+            <span>Tente buscar com outros termos</span>
         </div>
-    </div>
+    </main>
 
-    <div class="modal" id="modal">
+    <div class="modal-overlay" id="modal">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">×</button>
-            <img class="modal-image" id="modalImage" src="" alt="">
+            <button class="close-btn" onclick="closeModal()" aria-label="Fechar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-image-wrapper">
+                <img class="modal-image" id="modalImage" src="" alt="">
+                <div class="modal-image-gradient"></div>
+            </div>
             <div class="modal-body">
-                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <a class="media-btn" id="modalMediaLink" href="" target="_blank" rel="noopener noreferrer" aria-label="Assistir vídeo da receita">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                        Vídeo da receita
+                    </a>
+                </div>
 
                 <div class="section">
-                    <h3 class="section-title">Ingredientes</h3>
+                    <h3 class="section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                        Ingredientes
+                    </h3>
                     <ul class="ingredients-list" id="modalIngredients"></ul>
                 </div>
 
                 <div class="section">
-                    <h3 class="section-title">Modo de Preparo</h3>
+                    <h3 class="section-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        Modo de Preparo
+                    </h3>
                     <div class="instructions" id="modalInstructions"></div>
                 </div>
-                <a class="media-btn" id="modalMediaLink" href="" target="_blank">Assistir Vídeo</a>
             </div>
         </div>
     </div>
-    <script src="scripts.js"></script>
+
+    <footer>
+        <div class="container">
+            <p>Feito com <span class="heart">&#10084;</span> para amantes da cozinha</p>
+        </div>
+    </footer>
+
+    <script src="receitas.js" defer></script>
+    <script src="scripts.js" defer></script>
 </body>
 
 </html>
