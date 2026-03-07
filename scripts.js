@@ -10,6 +10,7 @@ const els = {
     modalIngredients: document.getElementById('modalIngredients'),
     modalInstructions: document.getElementById('modalInstructions'),
     modalMediaLink:    document.getElementById('modalMediaLink'),
+    modalVariations:   document.getElementById('modalVariations'),
     searchInput: document.getElementById('searchInput'),
 };
 
@@ -57,8 +58,28 @@ function openModal(recipeId) {
     els.modalTitle.textContent = recipe.name;
     els.modalIngredients.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join('');
     els.modalInstructions.textContent = recipe.instructions;
-    els.modalMediaLink.href = recipe.mediaLink || '#';
-    els.modalMediaLink.style.display = recipe.mediaLink ? '' : 'none';
+
+    // Variações de vídeo
+    if (recipe.variations && recipe.variations.length > 0) {
+        els.modalMediaLink.style.display = 'none';
+        els.modalVariations.style.display = 'flex';
+        els.modalVariations.innerHTML = `
+            <span class="variations-label">Assistir vídeo:</span>
+            <div class="variations-btns">
+                ${recipe.variations.map((v, i) => `
+                    <a class="variation-btn" href="${v.mediaLink}" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                        ${v.label}
+                    </a>
+                `).join('')}
+            </div>
+        `;
+    } else {
+        els.modalMediaLink.href = recipe.mediaLink || '#';
+        els.modalMediaLink.style.display = recipe.mediaLink ? '' : 'none';
+        els.modalVariations.style.display = 'none';
+        els.modalVariations.innerHTML = '';
+    }
 
     els.modal.style.display = 'block';
     document.body.style.overflow = 'hidden';

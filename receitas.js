@@ -6,31 +6,47 @@ const recipes = [
         image: "https://receitadesabor.com.br/wp-content/uploads/2025/12/Receita-de-Pudim-Lisinho-Que-Derrete-na-Boca.webp",
         mediaLink: "https://www.youtube.com/watch?v=nG_wLMfEtBI",
         ingredients: [
-            "2 latas de leite condensado",
+            "2 latas de leite condensado (395 g cada)",
             "4 ovos",
-            "2½ xícaras de chá de leite",
-            "1 xícara de chá de açúcar",
-            "⅓ de xícara de chá de água fervente"
+            "2½ xícaras (chá) de leite",
+            "1 xícara (chá) de açúcar",
+            "⅓ de xícara (chá) de água fervente"
         ],
-        instructions: `1. Pré-aqueça o forno a 160 °C.
+        instructions: `PUDIM
 
-2. Em uma tigela, misture delicadamente os ovos, o leite condensado e o leite, evitando formar bolhas de ar. Reserve e deixe a massa descansar.
+1. Pré-aqueça o forno a 160 ºC (temperatura baixa).
 
-3. Em uma panela, derreta o açúcar em fogo baixo até formar um caramelo dourado. Adicione com cuidado a água fervente e mexa até ficar homogêneo.
+2. Numa tigela pequena, quebre um ovo de cada vez e transfira para uma tigela maior. Mexa com o batedor de arame para misturar as claras com as gemas.
 
-4. Espalhe o caramelo em uma forma com furo no meio (cerca de 22 cm), cobrindo fundo e laterais. Deixe esfriar por 10 minutos.
+3. Junte o leite condensado e misture bem.
 
-5. Passe a massa do pudim por uma peneira e despeje sobre o caramelo.
+4. Acrescente o leite aos poucos, mexendo delicadamente com o batedor, apenas para misturar — evite movimentos bruscos para não incorporar ar. Os furinhos no pudim são bolhas de ar, por isso mexa com cuidado.
 
-6. Coloque a forma dentro de uma assadeira maior e adicione água quente até a metade da altura da forma, formando um banho-maria.
+5. Deixe a massa descansar enquanto prepara o caramelo — essa pausa é essencial para eliminar possíveis bolhas de ar.
 
-7. Leve ao forno e asse por cerca de 1h30, até o pudim firmar nas bordas e estar levemente cremoso no centro.
+CALDA DE CARAMELO
 
-8. Retire do forno, deixe esfriar e leve à geladeira por pelo menos 3 horas.
+6. Separe uma fôrma redonda com furo no meio, de 22 cm de diâmetro. Leve uma chaleira com 3 xícaras (chá) de água ao fogo médio — ela será usada para a calda e o banho-maria.
 
-9. Para desenformar, aqueça levemente o fundo da forma no fogo, cubra com um prato e vire de uma só vez.
+7. Numa panela média de borda alta, leve o açúcar ao fogo baixo, mexendo com espátula de silicone, até formar um caramelo dourado.
 
-10. Sirva gelado com a calda por cima.`
+8. Meça ⅓ de xícara (chá) da água fervente e, com cuidado, regue o caramelo. Atenção: a calda vai borbulhar. Misture com a espátula até ficar lisa.
+
+9. Transfira a calda para a fôrma, vertendo pelo cone central. Com um pano de prato ou luva térmica, segure e gire a fôrma devagar para caramelizar todo o fundo e a lateral.
+
+10. Deixe esfriar por cerca de 10 minutos — se colocar a massa sobre o caramelo muito quente, ela pode se misturar a ele.
+
+MONTAGEM E FORNO
+
+11. Despeje a massa do pudim na fôrma pelo cone central, passando por uma peneira.
+
+12. Coloque a fôrma dentro de uma assadeira, leve ao forno e, só então, adicione a água fervente para o banho-maria, até cobrir metade da fôrma do pudim.
+
+13. Asse por cerca de 1 hora e meia. O pudim estará pronto quando a superfície estiver firme, mas o interior ainda cremoso — ele termina de firmar enquanto esfria. Evite assar demasiadamente para não ressecar.
+
+14. Retire do forno e deixe amornar. Leve à geladeira por pelo menos 3 horas antes de servir (pode ser mantido na geladeira por até 5 dias).
+
+15. Para desenformar: passe a base da fôrma sobre a chama do fogão apenas para soltar a calda. Cubra com um prato de borda e vire de uma só vez. Deixe a calda escorrer sobre o pudim e sirva em seguida.`
     },
     {
         id: 2,
@@ -39,37 +55,31 @@ const recipes = [
         image: "https://bakeandcakegourmet.com.br/uploads/site/receitas/captura-de-tela-2024-11-11-as-113558-txyfbdog.png",
         mediaLink: "https://www.youtube.com/watch?v=tyYDJAlXQ3c",
         ingredients: [
-            "2 xícaras de arroz arbóreo",
-            "1,5 litro de caldo de legumes quente",
-            "1 cebola picada",
-            "1 talo de alho-poró (ou parte) fatiado",
-            "1 talo de salsão picado",
-            "½ xícara de vinho branco seco",
-            "1 gema de ovo",
-            "Raspas de 1 limão siciliano",
-            "Suco de 1 limão siciliano",
-            "2 colheres de sopa de manteiga",
-            "2 colheres de sopa de azeite",
-            "1 xícara de queijo parmesão ralado",
-            "Sal e pimenta-do-reino a gosto",
-            "Salsinha picada para finalizar",
-            "Rodelas de limão siciliano grelhadas (opcional)"
+            "250 g de arroz carnaroli ou arbóreo",
+            "Caldo de legumes coado (quantidade suficiente)",
+            "½ cebola picada",
+            "1 limão siciliano (suco e raspas)",
+            "300 ml de vinho branco",
+            "100 g de queijo parmesão ralado",
+            "100 g de manteiga sem sal",
+            "4 colheres de sopa de salsinha picada",
+            "1 colher de sopa de azeite extra virgem"
         ],
         instructions: `1. Prepare e mantenha o caldo de legumes aquecido durante todo o preparo.
 
-2. Em uma panela grande, aqueça o azeite e 1 colher de manteiga. Adicione o salsão, a cebola e o alho-poró, refogando até que fiquem macios.
+2. Em uma panela, aqueça o azeite e sue a cebola picada até ficar macia e transparente.
 
-3. Acrescente o arroz arbóreo e misture por alguns minutos, envolvendo os grãos.
+3. Acrescente o arroz e mexa para selar os grãos.
 
-4. Despeje o vinho branco e mexa até evaporar.
+4. Adicione o suco do limão siciliano e, logo em seguida, o vinho branco. Deixe reduzir, mexendo sempre.
 
-5. Comece a adicionar o caldo quente, uma concha por vez, mexendo sempre, esperando que parte do líquido seja absorvido antes de colocar mais.
+5. Vá adicionando o caldo de legumes coado pouco a pouco, mexendo sem parar, por cerca de 20 minutos, até o arroz estar al dente e cremoso.
 
-6. Quando estiver quase no ponto (al dente), adicione o suco de limão e as raspas, continuando a regar com mais caldo se necessário.
+6. Desligue o fogo. Acrescente a manteiga e o queijo parmesão ralado, misturando bem até incorporar e o risoto ficar bem cremoso.
 
-7. Desligue o fogo antes que o arroz fique seco. Acrescente o restante da manteiga, o queijo parmesão e a mistura de gema, limão e queijo (previamente misturada). Misture bem até ficar cremoso.
+7. Finalize com a salsinha picada e, se desejar, acrescente raspas de limão siciliano.
 
-8. Ajuste o sal e a pimenta. Sirva imediatamente, com salsinha picada e rodelas de limão grelhadas se desejar.`
+8. Sirva em seguida.`
     },
     {
         id: 3,
@@ -107,35 +117,39 @@ const recipes = [
         image: "https://www.kisabor.com.br/img/receitas/fricasse-1628262666.webp",
         mediaLink: "https://www.youtube.com/shorts/Y92iygk7x00",
         ingredients: [
-            "500g de peito de frango cozido e desfiado",
-            "1 lata de creme de leite",
-            "200g de milho verde",
-            "200g de ervilha",
-            "1 cebola picada",
-            "2 dentes de alho picados",
-            "2 colheres de sopa de azeite",
+            "1 kg de filé de frango",
+            "4 dentes de alho",
+            "1 cebola grande",
+            "2 tomates",
+            "½ colher (chá) de açafrão",
+            "1 colher (sopa) de páprica doce",
+            "2 latas de milho verde",
+            "200 ml de caldo de frango",
+            "1 pote de requeijão",
+            "1 caixa de creme de leite",
+            "Coloral a gosto",
+            "300 g de muçarela",
+            "Batata palha a gosto",
             "Sal e pimenta-do-reino a gosto",
-            "Cheiro-verde a gosto",
-            "100g de batata palha para cobertura",
-            "100g de queijo parmesão ralado"
+            "Cheiro-verde a gosto"
         ],
-        instructions: `1. Em uma panela grande, aqueça o azeite e refogue a cebola e o alho até ficarem dourados.
+        instructions: `1. Tempere o filé de frango com sal, pimenta-do-reino, açafrão, páprica doce e coloral. Reserve.
 
-2. Adicione o frango desfiado e refogue por alguns minutos, temperando com sal e pimenta-do-reino.
+2. Em uma panela grande, refogue o alho e a cebola picados até dourarem.
 
-3. Acrescente o milho e a ervilha, misturando bem todos os ingredientes.
+3. Adicione o frango temperado e doure dos dois lados. Acrescente os tomates picados e o caldo de frango. Cozinhe em fogo médio até o frango estar bem cozido.
 
-4. Adicione o creme de leite e misture até ficar cremoso e homogêneo. Cozinhe por mais 5 minutos em fogo baixo.
+4. Retire o frango, desfie e volte à panela com o caldo do cozimento.
 
-5. Ajuste o sal e finalize com cheiro-verde picado.
+5. Acrescente o milho verde, o requeijão e o creme de leite. Misture bem e cozinhe em fogo baixo por alguns minutos até obter um creme homogêneo.
 
-6. Transfira o fricassê para um refratário.
+6. Ajuste o sal, acrescente o cheiro-verde e misture.
 
-7. Cubra com a batata palha e polvilhe o queijo parmesão ralado por cima.
+7. Transfira o fricassê para um refratário. Cubra com a muçarela fatiada ou ralada.
 
-8. Leve ao forno pré-aquecido a 180°C por cerca de 15 minutos, ou até que a batata palha fique levemente dourada e o queijo gratinado.
+8. Leve ao forno pré-aquecido a 180 °C por cerca de 15 a 20 minutos, até o queijo derreter e dourar.
 
-9. Sirva quente acompanhado de arroz branco.`
+9. Retire do forno, cubra com batata palha e sirva em seguida.`
     },
     {
         id: 5,
@@ -144,29 +158,29 @@ const recipes = [
         image: "https://www.guacira.com.br/images/receitas/0170672001623938582.webp",
         mediaLink: "https://www.youtube.com/shorts/-D2KRmvT1R0",
         ingredients: [
-            "1 xícara de tapioca",
-            "1 xícara de leite",
-            "1 colher de sopa de fermento em pó",
-            "2 colheres de sopa de manteiga derretida",
-            "1 colher de chá de sal",
-            "½ xícara de queijo ralado (opcional)",
-            "1 colher de chá de açúcar"
+            "1 xícara (200 ml) de tapioca (150 g)",
+            "1 xícara (200 ml) de amido de milho (130 g)",
+            "1 copo de iogurte natural (170 g)",
+            "2 ovos",
+            "40 g de queijo ralado",
+            "60 ml de óleo",
+            "1 colher (sopa) de fermento para bolo",
+            "1 colher (sobremesa) de açúcar",
+            "1 colher (café) de sal"
         ],
-        instructions: `1. Pré-aqueça o forno a 200°C.
+        instructions: `1. Pré-aqueça o forno a 200 °C. Unte uma forma de 22 cm x 10 cm x 6 cm.
 
-2. Em uma tigela, misture a tapioca com o leite e deixe descansar por 5 minutos.
+2. Em uma tigela grande, misture a tapioca, o amido de milho, o açúcar e o sal.
 
-3. Adicione a manteiga derretida, o sal e o açúcar à mistura.
+3. Adicione o iogurte, os ovos e o óleo. Misture bem até formar uma massa homogênea.
 
-4. Incorpore o fermento em pó e o queijo ralado (se estiver usando) e misture bem.
+4. Acrescente o queijo ralado e o fermento e mexa delicadamente para incorporar.
 
-5. Despeje a massa em uma forma redonda ou quadrada untada com manteiga.
+5. Despeje a massa na forma untada e leve ao forno por aproximadamente 30 a 35 minutos, até ficar dourado e firme ao toque.
 
-6. Leve ao forno por aproximadamente 25 a 30 minutos, até ficar dourada e firme.
+6. Faça o teste do palito para verificar o ponto.
 
-7. Retire do forno e deixe esfriar um pouco antes de desenformar.
-
-8. Sirva ainda morno.`
+7. Retire do forno, deixe esfriar um pouco antes de desenformar e sirva ainda morno.`
     },
     {
         id: 6,
@@ -174,26 +188,32 @@ const recipes = [
         category: "Sobremesa",
         image: "https://guiadacozinha.com.br/wp-content/uploads/2019/10/tortinha-folhada-ma%C3%A7%C3%A3.jpg",
         mediaLink: "https://www.facebook.com/share/r/1GRMD5kqB3/",
+        variations: [
+            { label: "Versão 1", mediaLink: "https://www.facebook.com/reel/1997136570831762" },
+            { label: "Versão 2", mediaLink: "https://www.youtube.com/shorts/tIhaPsHsTzA" },
+            { label: "Versão 3", mediaLink: "https://www.youtube.com/shorts/mObPFZT1Nsg" }
+        ],
         ingredients: [
             "1 maçã vermelha grande",
-            "400 gr de massa folhada ou massa de pastel",
+            "400 g de massa folhada ou massa de pastel",
+            "Manteiga a gosto (se usar massa de pastel)",
             "Canela a gosto",
             "Açúcar de confeiteiro a gosto"
         ],
-        instructions: `1. Se estiver usando massa de pastel, una a massa com manteiga antes de colocar a maçã.
+        instructions: `Rendimento: 4 unidades
 
-2. Prepare a massa folhada ou de pastel sobre uma superfície de trabalho.
+1. Pré-aqueça o forno a 200 °C.
 
-3. Descasque a maçã e corte em espiral ou em fatias finas, mantendo uma forma circular ou em espiral.
+2. Prepare a massa folhada ou de pastel sobre uma superfície de trabalho e corte em 4 porções. Se estiver usando massa de pastel, unte cada porção com manteiga antes de colocar a maçã.
 
-4. Coloque a maçã sobre a massa folhada.
+3. Descasque a maçã e corte em fatias finas.
 
-5. Polvilhe generosamente canela e açúcar de confeiteiro sobre a maçã.
+4. Distribua as fatias de maçã sobre cada porção de massa.
 
-6. Asse em forno pré-aquecido a 200°C por cerca de 20 minutos, se estiver usando massa folhada. Se for massa de pastel, asse por 15 minutos, até ficar dourada.
+5. Polvilhe canela e açúcar de confeiteiro sobre as maçãs.
 
-7. Retire do forno quando estiver crocante e dourada.
+6. Leve ao forno por cerca de 20 minutos se usar massa folhada, ou 15 minutos se usar massa de pastel, até ficar dourada e crocante.
 
-8. Sirva morno ou em temperatura ambiente.`
+7. Retire do forno e sirva morno ou em temperatura ambiente.`
     }
 ];
