@@ -215,5 +215,35 @@ MONTAGEM E FORNO
 6. Leve ao forno por cerca de 20 minutos se usar massa folhada, ou 15 minutos se usar massa de pastel, até ficar dourada e crocante.
 
 7. Retire do forno e sirva morno ou em temperatura ambiente.`
+    },
+    {
+        id: 7,
+        name: "Caponata de Berinjela",
+        category: "Saudável",
+        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcristalalimentos.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fcaponata-berinjela-1024x681.jpg&f=1&nofb=1&ipt=153f7863cb464fe887a289a3eaf100b2a339e20e53bbba8d91d2a23a7479b7ee",
+        mediaLink: "https://www.youtube.com/shorts/CwOViUMOV8Q",
+        ingredients: [
+            "Berinjela",
+            "Pimentão vermelho",
+            "Pimentão amarelo",
+            "Cebola",
+            "Cebola roxa",
+            "Alho",
+            "Azeitona",
+            "Uva-passas",
+            "Pimenta calabresa",
+            "Sal",
+            "Pimenta",
+            "Vinagre",
+            "Azeite",
+            "Castanhas ou nozes"
+        ],
+        instructions: `1. Pique a berinjela, o pimentão vermelho, o pimentão amarelo, a cebola, a cebola roxa e o alho. Adicione a azeitona, as uvas-passas, a pimenta calabresa, o sal, a pimenta, o vinagre e o azeite, e misture bem.
+
+2. Leve para o forno a 250 graus por 1 hora e meia ou até ficar pronto.
+
+3. Finalize com as castanhas ou nozes.
+
+4. Coloque em um pote e cubra com azeite.`
     }
 ];

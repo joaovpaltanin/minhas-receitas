@@ -1,22 +1,22 @@
-// Os dados das receitas estão em receitas.js, carregado antes deste arquivo.
+// Dados das receitas carregados de receitas.js (declarado antes deste arquivo)
 
-// Cache de elementos do DOM — evita buscas repetidas a cada interação
 const els = {
-    grid:       document.getElementById('recipesGrid'),
-    noResults:  document.getElementById('noResults'),
-    modal:      document.getElementById('modal'),
-    modalImage: document.getElementById('modalImage'),
-    modalTitle: document.getElementById('modalTitle'),
+    grid:             document.getElementById('recipesGrid'),
+    noResults:        document.getElementById('noResults'),
+    modal:            document.getElementById('modal'),
+    modalImage:       document.getElementById('modalImage'),
+    modalTitle:       document.getElementById('modalTitle'),
     modalIngredients: document.getElementById('modalIngredients'),
     modalInstructions: document.getElementById('modalInstructions'),
-    modalMediaLink:    document.getElementById('modalMediaLink'),
-    modalVariations:   document.getElementById('modalVariations'),
-    searchInput: document.getElementById('searchInput'),
+    modalMediaLink:   document.getElementById('modalMediaLink'),
+    modalVariations:  document.getElementById('modalVariations'),
+    searchInput:      document.getElementById('searchInput'),
 };
 
-// SVG reutilizável dos cards (definido uma vez, não recriado a cada render)
 const PLAY_ICON = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>`;
 const TAG_ICON  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>`;
+
+const IMG_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect fill='%23e8e8e8' width='400' height='200'/%3E%3Ctext fill='%23aaa' font-family='sans-serif' font-size='16' x='50%25' y='50%25' text-anchor='middle' dy='.35em'%3ESem imagem%3C/text%3E%3C/svg%3E";
 
 function renderRecipes(recipesToRender) {
     if (recipesToRender.length === 0) {
@@ -28,10 +28,12 @@ function renderRecipes(recipesToRender) {
     els.grid.style.display = 'grid';
     els.noResults.style.display = 'none';
 
-    els.grid.innerHTML = recipesToRender.map(recipe => `
+    els.grid.innerHTML = recipesToRender.map(recipe => {
+        const imgSrc = recipe.image || IMG_PLACEHOLDER;
+        return `
         <div class="recipe-card" data-id="${recipe.id}">
             <div class="recipe-image-wrapper">
-                <img class="recipe-image" src="${recipe.image}" alt="${recipe.name}" loading="lazy" decoding="async">
+                <img class="recipe-image" src="${imgSrc}" alt="${recipe.name}" loading="lazy" decoding="async" onerror="this.src='${IMG_PLACEHOLDER}'">
             </div>
             <div class="recipe-info">
                 <div class="recipe-name">${recipe.name}</div>
@@ -45,28 +47,27 @@ function renderRecipes(recipesToRender) {
                         : ''}
                 </div>
             </div>
-        </div>
-    `).join('');
+        </div>`;
+    }).join('');
 }
 
 function openModal(recipeId) {
     const recipe = recipes.find(r => r.id === recipeId);
     if (!recipe) return;
 
-    els.modalImage.src = recipe.image;
+    els.modalImage.src = recipe.image || IMG_PLACEHOLDER;
     els.modalImage.alt = recipe.name;
     els.modalTitle.textContent = recipe.name;
     els.modalIngredients.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join('');
     els.modalInstructions.textContent = recipe.instructions;
 
-    // Variações de vídeo
     if (recipe.variations && recipe.variations.length > 0) {
         els.modalMediaLink.style.display = 'none';
         els.modalVariations.style.display = 'flex';
         els.modalVariations.innerHTML = `
             <span class="variations-label">Assistir vídeo:</span>
             <div class="variations-btns">
-                ${recipe.variations.map((v, i) => `
+                ${recipe.variations.map(v => `
                     <a class="variation-btn" href="${v.mediaLink}" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                         ${v.label}
@@ -89,31 +90,28 @@ function openModal(recipeId) {
 function closeModal() {
     els.modal.classList.remove('active');
     document.body.style.overflow = '';
-    setTimeout(() => { els.modal.style.display = 'none'; }, 300);
+    els.modal.addEventListener('transitionend', () => {
+        els.modal.style.display = 'none';
+    }, { once: true });
 }
 
-// Delegação de evento: um único listener no grid em vez de um onclick por card
+// Delegação de evento: um único listener no grid
 els.grid.addEventListener('click', function (e) {
+    if (e.target.closest('.card-video-link')) return;
     const card = e.target.closest('.recipe-card');
     if (!card) return;
-
-    // Ignora cliques no link de vídeo
-    if (e.target.closest('.card-video-link')) return;
-
     openModal(Number(card.dataset.id));
 });
 
-// Fecha o modal ao clicar no overlay
 els.modal.addEventListener('click', function (e) {
     if (e.target === this) closeModal();
 });
 
-// Fecha o modal com ESC
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && els.modal.style.display === 'block') closeModal();
 });
 
-// Debounce na busca — evita filtrar a cada tecla, aguarda 200ms de pausa
+// Busca com debounce de 200ms
 let searchTimer;
 els.searchInput.addEventListener('input', function () {
     clearTimeout(searchTimer);
