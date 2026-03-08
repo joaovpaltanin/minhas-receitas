@@ -245,5 +245,42 @@ MONTAGEM E FORNO
 3. Finalize com as castanhas ou nozes.
 
 4. Coloque em um pote e cubra com azeite.`
+    },
+    {
+        id: 8,
+        name: "Abóbora Cabotiá Assada com Alecrim e Mel",
+        category: "Prato Principal",
+        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs2-redeglobo.glbimg.com%2FPKdMEJydHP0PKdExIM1_w_7Y5Jc%3D%2F1200x%2Fsmart%2Ffilters%3Acover()%3Astrip_icc()%2Fi.s3.glbimg.com%2Fv1%2FAUTH_b58693ed41d04a39826739159bf600a0%2Finternal_photos%2Fbs%2F2023%2Fe%2FA%2F1F4htzQlerWyeg48Aikw%2Fclose-delicioso-de-fatias-de-abobora-assadas-23-2148666960.jpg&f=1&nofb=1&ipt=5ecdc3bb79f860f0b0ae62293b2f3fdca00e8e263b3444c32536ef0899d40fb5",
+        mediaLink: "https://www.youtube.com/watch?v=4U5IBD9GTOk",
+        ingredients: [
+            "1 abóbora cabotiá média",
+            "1 cabeça de alho assado",
+            "Alecrim fresco picado a gosto",
+            "Mel a gosto",
+            "Azeite a gosto",
+            "Vinagre balsâmico a gosto",
+            "Sal a gosto",
+            "Pimenta do reino a gosto",
+            "1 cebola média, fatiada"
+        ],
+        instructions: `1. Corte a abóbora cabotiá em fatias, retirando as sementes.
+
+2. Amasse a cabeça de alho assado.
+
+3. Pique o alecrim fresco.
+
+4. Em uma tigela, prepare a marinada misturando o mel, azeite, vinagre balsâmico, sal e pimenta do reino. Adicione o alecrim picado e misture bem.
+
+5. Pré-aqueça o forno a 200°C.
+
+6. Em uma assadeira grande, misture as fatias de abóbora com a marinada, garantindo que todas as fatias estejam bem temperadas.
+
+7. Adicione a cebola fatiada e o alho amassado à abóbora e misture novamente.
+
+8. Leve ao forno pré-aquecido por 20 minutos.
+
+9. Vire as fatias de abóbora e asse por mais 20 minutos, ou até ficarem macias e douradas.
+
+10. Sirva quente ou como salada. Não é necessário descascar a abóbora.`
     }
 ];
