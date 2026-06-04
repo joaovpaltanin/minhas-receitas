@@ -282,5 +282,103 @@ MONTAGEM E FORNO
 9. Vire as fatias de abóbora e asse por mais 20 minutos, ou até ficarem macias e douradas.
 
 10. Sirva quente ou como salada. Não é necessário descascar a abóbora.`
+    },
+    {
+        id: 9,
+        name: "Mini Quiche com Massa de Grão-de-Bico",
+        category: "Lanche",
+        image: "https://s2-receitas.glbimg.com/d8WMugpk9pAIoV-900kY6sXcEMU=/0x0:1080x720/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2021/t/F/dAh9VJTmSLoQSwOtleqw/como-fazer-quiche-2-.jpg",
+        mediaLink: "https://www.youtube.com/watch?v=hHrSQZ08gg4",
+        ingredients: [
+            "300 gramas de grão-de-bico",
+            "Água",
+            "1 colher de sopa de azeite",
+            "Sal e pimenta-do-reino a gosto",
+            "2 palmitos",
+            "3 aspargos",
+            "½ cebola",
+            "1 colher de sopa de azeite",
+            "¼ xícara de leite",
+            "½ caixinha de creme de leite (100 ml)",
+            "2 ovos",
+            "Noz moscada a gosto",
+            "½ xícara de parmesão ralado"
+        ],
+        instructions: `MASSA:
+1. Lave os grãos de bico em água corrente e deixe de molho por 12h (da noite para o dia).
+
+2. Coloque na panela de pressão com água, na medida que fique 2 a 3 dedos acima da quantidade dos grãos.
+
+3. Deixe cozinhar de 15 a 20 minutos após pegar pressão.
+
+4. Abra a panela de pressão e escorra toda a água.
+
+5. Em um processador, bata os grãos de bico com o azeite, sal e pimenta, até formar uma massa homogênea.
+
+6. Preencha as forminhas de empada com a massa. Não é pra ficar nem fina nem muito grossa.
+
+7. Leve ao forno pré-aquecido a 200°C por 10 minutos.
+
+RECHEIO:
+8. Pique a cebola, os aspargos e o palmito em cubos pequenos.
+
+9. Em uma frigideira, adicione o azeite e leve ao fogo para aquecer.
+
+10. Com o azeite já quente, adicione a cebola e refogue bem até cozinhar.
+
+11. Acrescente o palmito e os aspargos, refogue mais um pouco e reserve.
+
+12. Bata no liquidificador: o leite, o creme de leite, os ovos, o sal, a pimenta e a noz moscada. Reserve.
+
+MONTAGEM:
+13. Preencha as massas assadas com o recheio refogado e o líquido batido no liquidificador.
+
+14. Finalize com o queijo parmesão e leve ao forno a 180° até dourar.`
+    },
+    {
+        id: 10,
+        name: "Torta Salgada Simples",
+        category: "Prato Principal",
+        image: "https://i.ytimg.com/vi/s4yjAgLBUqE/maxresdefault.jpg",
+        mediaLink: "https://www.youtube.com/watch?v=s4yjAgLBUqE",
+        ingredients: [
+            "3 ovos",
+            "½ xícara de óleo (120ml)",
+            "1 colher de café de sal",
+            "1 xícara de leite",
+            "2 xícaras de farinha de trigo",
+            "1 colher de sopa de fermento em pó",
+            "Cheiro verde a gosto",
+            "150g de presunto picadinho",
+            "150g de queijo mussarela",
+            "1 cebola pequena picadinha",
+            "1 tomate",
+            "Sal, pimenta e orégano a gosto",
+            "Azeitonas, milho, ervilha, palmito e cenoura ralada a gosto"
+        ],
+        instructions: `MASSA:
+1. Em uma tigela, misture os ovos, o óleo e o sal.
+
+2. Adicione o leite e misture bem.
+
+3. Acrescente a farinha de trigo e misture até obter uma massa homogênea.
+
+4. Por último, adicione o fermento em pó e o cheiro verde, mexendo delicadamente para incorporar.
+
+RECHEIO:
+5. Pique o presunto, a cebola e o tomate em pequenos cubos.
+
+6. Misture o presunto, a cebola, o tomate, a mussarela e tempere com sal, pimenta e orégano.
+
+7. Adicione azeitonas, milho, ervilha, palmito e cenoura ralada conforme seu gosto.
+
+MONTAGEM E ASSAMENTO:
+8. Despeje a massa em uma forma de pizza ou retangular untada e enfarinhada.
+
+9. Distribua o recheio uniformemente sobre a massa.
+
+10. Leve ao forno pré-aquecido a 180°C por aproximadamente 30 a 40 minutos, até a massa ficar dourada e firme.
+
+11. Retire do forno, deixe esfriar um pouco e sirva em seguida.`
     }
 ];

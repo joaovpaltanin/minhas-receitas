@@ -163,18 +163,53 @@ main.container {
     animation: cardFadeIn 0.45s ease forwards;
 }
 
-.recipe-card:nth-child(1)  { animation-delay: 0.04s; }
-.recipe-card:nth-child(2)  { animation-delay: 0.08s; }
-.recipe-card:nth-child(3)  { animation-delay: 0.12s; }
-.recipe-card:nth-child(4)  { animation-delay: 0.16s; }
-.recipe-card:nth-child(5)  { animation-delay: 0.20s; }
-.recipe-card:nth-child(6)  { animation-delay: 0.24s; }
-.recipe-card:nth-child(7)  { animation-delay: 0.28s; }
-.recipe-card:nth-child(8)  { animation-delay: 0.32s; }
-.recipe-card:nth-child(9)  { animation-delay: 0.36s; }
-.recipe-card:nth-child(10) { animation-delay: 0.40s; }
-.recipe-card:nth-child(11) { animation-delay: 0.44s; }
-.recipe-card:nth-child(12) { animation-delay: 0.48s; }
+.recipe-card:nth-child(1) {
+    animation-delay: 0.04s;
+}
+
+.recipe-card:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.recipe-card:nth-child(3) {
+    animation-delay: 0.12s;
+}
+
+.recipe-card:nth-child(4) {
+    animation-delay: 0.16s;
+}
+
+.recipe-card:nth-child(5) {
+    animation-delay: 0.20s;
+}
+
+.recipe-card:nth-child(6) {
+    animation-delay: 0.24s;
+}
+
+.recipe-card:nth-child(7) {
+    animation-delay: 0.28s;
+}
+
+.recipe-card:nth-child(8) {
+    animation-delay: 0.32s;
+}
+
+.recipe-card:nth-child(9) {
+    animation-delay: 0.36s;
+}
+
+.recipe-card:nth-child(10) {
+    animation-delay: 0.40s;
+}
+
+.recipe-card:nth-child(11) {
+    animation-delay: 0.44s;
+}
+
+.recipe-card:nth-child(12) {
+    animation-delay: 0.48s;
+}
 
 @keyframes cardFadeIn {
     to {
@@ -587,8 +622,15 @@ footer {
 }
 
 @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.18); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
 }
 
 /* ===================== FAB BUTTON ===================== */
@@ -944,15 +986,29 @@ footer {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* ===================== SCROLLBAR ===================== */
 
-::-webkit-scrollbar { width: 7px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #aaa; }
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
 
 /* ===================== RESPONSIVE ===================== */
 
