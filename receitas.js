@@ -154,7 +154,7 @@ MONTAGEM E FORNO
     {
         id: 5,
         name: "Pão de Tapioca",
-        category: "Lanche",
+        category: "Pão",
         image: "https://www.guacira.com.br/images/receitas/0170672001623938582.webp",
         mediaLink: "https://www.youtube.com/shorts/-D2KRmvT1R0",
         ingredients: [
@@ -189,9 +189,9 @@ MONTAGEM E FORNO
         image: "https://guiadacozinha.com.br/wp-content/uploads/2019/10/tortinha-folhada-ma%C3%A7%C3%A3.jpg",
         mediaLink: "https://www.facebook.com/share/r/1GRMD5kqB3/",
         variations: [
-            { label: "Versão 1", mediaLink: "https://www.facebook.com/reel/1997136570831762" },
-            { label: "Versão 2", mediaLink: "https://www.youtube.com/shorts/tIhaPsHsTzA" },
-            { label: "Versão 3", mediaLink: "https://www.youtube.com/shorts/mObPFZT1Nsg" }
+            { label: "Torta de Maçã", mediaLink: "https://www.facebook.com/reel/1997136570831762" },
+            { label: "Maçã com massa folhada", mediaLink: "https://www.youtube.com/shorts/tIhaPsHsTzA" },
+            { label: "Folhado de maçã com mel", mediaLink: "https://www.youtube.com/shorts/mObPFZT1Nsg" }
         ],
         ingredients: [
             "1 maçã vermelha grande",
@@ -380,5 +380,64 @@ MONTAGEM E ASSAMENTO:
 10. Leve ao forno pré-aquecido a 180°C por aproximadamente 30 a 40 minutos, até a massa ficar dourada e firme.
 
 11. Retire do forno, deixe esfriar um pouco e sirva em seguida.`
+    },
+    {
+        id: 11,
+        name: "Pão Francês (Ciclo Francês)",
+        category: "Pão",
+        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80",
+        ingredients: [],
+        variations: [
+            {
+                label: "Pão de 450 g",
+                ingredients: [
+                    "3/4 copo de água",
+                    "1 colher (sopa) de azeite de oliva",
+                    "1 colher (chá) de sal",
+                    "1 colher (sopa) de açúcar",
+                    "2 copos de farinha de trigo especial",
+                    "1 colher (chá) de fermento biológico seco instantâneo"
+                ]
+            },
+            {
+                label: "Pão de 600 g",
+                ingredients: [
+                    "1 copo de água",
+                    "1 colher (sopa) de azeite de oliva",
+                    "1 1/2 colher (chá) de sal",
+                    "1 1/2 colher (sopa) de açúcar",
+                    "3 copos de farinha de trigo especial",
+                    "2 colheres (chá) de fermento biológico seco instantâneo"
+                ]
+            },
+            {
+                label: "Pão de 900 g",
+                ingredients: [
+                    "1 1/3 copo de água",
+                    "1 1/2 colher (sopa) de azeite de oliva",
+                    "1 1/2 colher (chá) de sal",
+                    "2 colheres (sopa) de açúcar",
+                    "4 copos de farinha de trigo especial",
+                    "2 colheres (chá) de fermento biológico seco instantâneo"
+                ]
+            }
+        ],
+        instructions: `1. Retirar a fôrma de assar de dentro da Panificadora Multi Pane.
+
+2. Adicionar todos os ingredientes na ordem indicada (líquidos primeiro, depois secos e por último o fermento).
+
+3. Recolocar a fôrma de assar na Panificadora.
+
+4. Escolher o Ciclo: pressionar o botão OPÇÕES e selecionar 2 (francês).
+
+5. Selecionar o tamanho do pão: pressionar o botão QUANTIDADE DA MASSA e escolher a opção I (para pães de 450 g ou 600 g) ou II (para pães de 900 g ou 1200 g).
+
+6. Escolher a cor da casca do pão: pressionar o botão COR e selecionar Clara, Média ou Escura.
+
+7. Fechar a tampa.
+
+8. Pressionar o botão INICIAR/PARAR.
+
+Nota: para farinha de trigo, utilizar o copo Britânia cheio (240 ml) e a colher medidora Britânia.`
     }
 ];
