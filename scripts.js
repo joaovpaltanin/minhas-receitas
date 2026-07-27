@@ -10,6 +10,7 @@ const els = {
     modalInstructions: document.getElementById('modalInstructions'),
     modalMediaLink: document.getElementById('modalMediaLink'),
     modalVariations: document.getElementById('modalVariations'),
+    modalVariationDescription: document.getElementById('modalVariationDescription'),
     searchInput: document.getElementById('searchInput'),
 };
 
@@ -17,6 +18,9 @@ const PLAY_ICON = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="tru
 const TAG_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>`;
 
 const IMG_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect fill='%23e8e8e8' width='400' height='200'/%3E%3Ctext fill='%23aaa' font-family='sans-serif' font-size='16' x='50%25' y='50%25' text-anchor='middle' dy='.35em'%3ESem imagem%3C/text%3E%3C/svg%3E";
+
+let currentRecipe = null;
+let currentVariation = 0;
 
 function renderRecipes(recipesToRender) {
     if (recipesToRender.length === 0) {
@@ -40,10 +44,10 @@ function renderRecipes(recipesToRender) {
                 <div class="recipe-meta">
                     <div class="recipe-meta-left">
                         <span class="recipe-tag">${TAG_ICON}${recipe.category}</span>
-                        <span class="recipe-preview">${recipe.ingredients.length} ingredientes</span>
+                        <span class="recipe-preview">${recipe.variations?.length ? recipe.variations.length + ' variações' : recipe.ingredients.length + ' ingredientes'}</span>
                     </div>
-                    ${recipe.mediaLink
-                ? `<a class="card-video-link" href="${recipe.mediaLink}" target="_blank" rel="noopener noreferrer" aria-label="Assistir vídeo de ${recipe.name}">${PLAY_ICON}Vídeo</a>`
+                    ${(recipe.mediaLink || recipe.variations?.some(v => v.mediaLink))
+                ? `<a class="card-video-link" href="${recipe.mediaLink || recipe.variations?.find(v => v.mediaLink)?.mediaLink}" target="_blank" rel="noopener noreferrer" aria-label="Assistir vídeo de ${recipe.name}">${PLAY_ICON}Vídeo</a>`
                 : ''}
                 </div>
             </div>
@@ -51,36 +55,68 @@ function renderRecipes(recipesToRender) {
     }).join('');
 }
 
+function getActiveVariation() {
+    if (!currentRecipe?.variations?.length) return null;
+    return currentRecipe.variations[currentVariation] || null;
+}
+
+function applyVariationContent() {
+    const variation = getActiveVariation();
+    const ingredients = variation?.ingredients || currentRecipe?.ingredients || [];
+    const instructions = variation?.instructions || currentRecipe?.instructions || '';
+    const mediaLink = variation?.mediaLink || currentRecipe?.mediaLink || '';
+    const description = variation?.description || '';
+
+    els.modalIngredients.innerHTML = ingredients.map(ing => `<li>${ing}</li>`).join('');
+    els.modalInstructions.textContent = instructions;
+
+    if (els.modalMediaLink) {
+        els.modalMediaLink.href = mediaLink || '#';
+        els.modalMediaLink.style.display = mediaLink ? '' : 'none';
+    }
+
+    if (els.modalVariationDescription) {
+        els.modalVariationDescription.textContent = description;
+        els.modalVariationDescription.style.display = description ? '' : 'none';
+    }
+}
+
+function selectVariation(index) {
+    if (!currentRecipe?.variations?.length) return;
+    currentVariation = Math.max(0, Math.min(index, currentRecipe.variations.length - 1));
+    const buttons = els.modalVariations.querySelectorAll('.variation-btn');
+    buttons.forEach((btn, i) => btn.classList.toggle('active', i === currentVariation));
+    applyVariationContent();
+}
+
 function openModal(recipeId) {
     const recipe = recipes.find(r => r.id === recipeId);
     if (!recipe) return;
 
+    currentRecipe = recipe;
+    currentVariation = 0;
+
     els.modalImage.src = recipe.image || IMG_PLACEHOLDER;
     els.modalImage.alt = recipe.name;
     els.modalTitle.textContent = recipe.name;
-    els.modalIngredients.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join('');
-    els.modalInstructions.textContent = recipe.instructions;
 
     if (recipe.variations && recipe.variations.length > 0) {
-        els.modalMediaLink.style.display = 'none';
         els.modalVariations.style.display = 'flex';
         els.modalVariations.innerHTML = `
-            <span class="variations-label">Assistir vídeo:</span>
+            <span class="variations-label">Variações:</span>
             <div class="variations-btns">
-                ${recipe.variations.map(v => `
-                    <a class="variation-btn" href="${v.mediaLink}" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                        ${v.label}
-                    </a>
-                `).join('')}
+                ${recipe.variations.map((v, i) => `<button class="variation-btn ${i === 0 ? 'active' : ''}" data-index="${i}" type="button">${v.label}</button>`).join('')}
             </div>
         `;
+        els.modalVariations.querySelectorAll('.variation-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => { e.preventDefault(); selectVariation(Number(btn.dataset.index)); });
+        });
     } else {
-        els.modalMediaLink.href = recipe.mediaLink || '#';
-        els.modalMediaLink.style.display = recipe.mediaLink ? '' : 'none';
         els.modalVariations.style.display = 'none';
         els.modalVariations.innerHTML = '';
     }
+
+    applyVariationContent();
 
     els.modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -124,7 +160,8 @@ els.searchInput.addEventListener('input', function () {
         const filtered = recipes.filter(r =>
             r.name.toLowerCase().includes(term) ||
             r.category.toLowerCase().includes(term) ||
-            r.ingredients.some(ing => ing.toLowerCase().includes(term))
+            r.ingredients.some(ing => ing.toLowerCase().includes(term)) ||
+            r.variations?.some(v => v.ingredients?.some(ing => ing.toLowerCase().includes(term)))
         );
         renderRecipes(filtered);
     }, 200);
