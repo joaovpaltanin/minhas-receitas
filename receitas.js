@@ -385,7 +385,7 @@ MONTAGEM E ASSAMENTO:
         id: 11,
         name: "Pão Francês (Ciclo Francês)",
         category: "Pão",
-        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80",
+        image: "https://cdn.aquelareceita.com.br/recipes/FB-Pao-Frances-Grande.00_03_05_41.Quadro002-1641924803085.png",
         ingredients: [],
         variations: [
             {
@@ -439,5 +439,133 @@ MONTAGEM E ASSAMENTO:
 8. Pressionar o botão INICIAR/PARAR.
 
 Nota: para farinha de trigo, utilizar o copo Britânia cheio (240 ml) e a colher medidora Britânia.`
+    },
+    {
+        id: 12,
+        name: "Fubá c/ Iogurte",
+        category: "Bolo",
+        image: "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-de-fuba-e-iogurte-38184.jpg",
+        ingredients: [
+            "2 ovos (bater)",
+            "1 copo de iogurte natural",
+            "1 xícara de fubá",
+            "2 colheres de azeite",
+            "1 copo de farinha de aveia",
+            "1 colher de açúcar",
+            "1 colher de fermento de bolo"
+        ],
+        instructions: `1. Em uma tigela, bata os ovos e misture com o iogurte natural.
+
+2. Acrescente o fubá, o azeite, a farinha de aveia, o açúcar e o fermento de bolo. Misture até obter uma massa homogênea.
+
+3. A massa deve ficar mole, mas não líquida.
+
+4. Transfira para uma forma untada e, por cima, polvilhe gergelim e semente de girassol.
+
+5. Leve ao forno pré-aquecido e asse até ficar dourado e firme ao toque. Faça o teste do palito.`
+    },
+    {
+        id: 13,
+        name: "Pão Australiano",
+        category: "Pão",
+        image: "https://www.ajinomotofoodservice.com.br/wp/content/uploads/receitas/1-pao-australiano-15-10-2020-tuxkg.jpg",
+        ingredients: [
+            "2 ovos",
+            "2 colheres de azeite",
+            "1 cup de água (pode ser leite diverso)",
+            "1/2 xícara de farinha de arroz",
+            "120 ml de farinha de aveia (pode por mais para deixar mais firme)",
+            "1 colher de açúcar demerara ou mascavo",
+            "1 colher de sopa de cacau",
+            "1 colher de fermento para bolo"
+        ],
+        instructions: `1. Em uma tigela, misture/bata os ovos com o azeite.
+
+2. Adicione a água (ou leite diverso), a farinha de arroz, a farinha de aveia, o açúcar, o cacau e o fermento.
+
+3. Misture bem até formar uma massa homogênea. Se desejar uma massa mais firme, acrescente um pouco mais de farinha de aveia.
+
+4. Unte uma forma com azeite e polvilhe cacau por toda a superfície.
+
+5. Despeje a massa na forma e leve ao forno pré-aquecido até assar completamente.`
+    },
+    {
+        id: 14,
+        name: "Pão de Abóbora",
+        category: "Pão",
+        image: "https://www.apitadadopai.com/wp-content/uploads/2022/09/untitled-design-42.png",
+        ingredients: [
+            "3 colheres de abóbora amassada",
+            "2 ovos",
+            "Sal a gosto",
+            "2 colheres de linhaça dourada (triturar no dia)",
+            "2 colheres de azeite",
+            "2 xícaras de farelo de aveia",
+            "2 colheres de farinha de arroz",
+            "1 colher de fermento químico"
+        ],
+        instructions: `1. Em uma tigela, misture a abóbora amassada com os ovos.
+
+2. Acrescente o sal, a linhaça dourada triturada no dia, o azeite, o farelo de aveia, a farinha de arroz e o fermento químico.
+
+3. Misture bem até obter uma massa mole.
+
+4. Transfira a massa para uma forma untada e enfarinhada.
+
+5. Por cima, decore com sementes de abóbora e gergelim. Se desejar, adicione também orégano ou chimichurri.
+
+6. Leve ao forno pré-aquecido e asse até que esteja firme e dourado.`
+    },
+    {
+        id: 15,
+        name: "Pão Integral",
+        category: "Pão",
+        image: "https://i.panelinha.com.br/i1/bk-5103-blog-ayu6207-editado.webp",
+        ingredients: [
+            "1 1/2 copo de água morna",
+            "2 colheres de açúcar",
+            "10 g de fermento",
+            "2 colheres de linhaça triturada",
+            "Sal a gosto",
+            "2 xícaras de mistura de farinha (80% farinha integral + 20% farinha branca)",
+            "3 colheres de azeite"
+        ],
+        instructions: `1. Em uma tigela grande, misture a água morna com o açúcar, o fermento, a linhaça triturada e o sal. Mexa bem.
+
+2. Adicione a mistura de farinhas (80% integral e 20% branca) e o azeite.
+
+3. Misture e sove até formar uma massa lisa e homogênea.
+
+4. Se desejar, acrescente sementes e castanhas à massa.
+
+5. Deixe a massa crescer em local aquecido até dobrar de volume.
+
+6. Modele o pão, coloque em uma forma adequada e leve ao forno pré-aquecido até assar e dourar.`
+    },
+    {
+        id: 16,
+        name: "Guacamole Original",
+        category: "Aperitivo",
+        image: "https://img.band.com.br/image/2023/09/14/aprenda-receita-original-de-guacamole-161239.jpg",
+        mediaLink: "https://www.youtube.com/shorts/7QnLEPaoKjs",
+        ingredients: [
+            "Abacates (tipo avocado)",
+            "Tomate (sem sementes)",
+            "1/2 cebola picada",
+            "Molho de pimenta a gosto",
+            "Sal a gosto",
+            "Suco de limão",
+            "Coentro fresco picado",
+            "Tortilhas de milho (para acompanhar)"
+        ],
+        instructions: `1. Retire o caroço dos abacates e, com o auxílio de uma colher, remova toda a polpa. Corte os abacates o menor possível e coloque em um recipiente.
+
+Dica: não amasse o abacate logo de início para evitar que perca líquido.
+
+2. Corte o tomate em cubos bem pequenos, lembrando de retirar todas as sementes para não juntar água na receita. Adicione o tomate picado e a meia cebola picada à tigela com o abacate.
+
+3. Acrescente um pouco de molho de pimenta, sal a gosto, suco de limão e bastante coentro picado.
+
+4. Misture bem todos os ingredientes e amasse levemente até obter a consistência desejada. Sirva num prato acompanhado de tortilhas.`
     }
 ];
