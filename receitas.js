@@ -442,8 +442,8 @@ Nota: para farinha de trigo, utilizar o copo Britânia cheio (240 ml) e a colher
     },
     {
         id: 12,
-        name: "Fubá c/ Iogurte",
-        category: "Bolo",
+        name: "Pão de Fubá c/ Iogurte",
+        category: "Pão",
         image: "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-de-fuba-e-iogurte-38184.jpg",
         ingredients: [
             "2 ovos (bater)",

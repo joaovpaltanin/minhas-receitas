@@ -12,6 +12,7 @@ const els = {
     modalVariations: document.getElementById('modalVariations'),
     modalVariationDescription: document.getElementById('modalVariationDescription'),
     searchInput: document.getElementById('searchInput'),
+    searchClearBtn: document.getElementById('searchClearBtn'),
 };
 
 const PLAY_ICON = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>`;
@@ -149,22 +150,32 @@ document.addEventListener('keydown', function (e) {
 
 // Busca com debounce de 200ms
 let searchTimer;
+function performSearch() {
+    const term = els.searchInput.value.toLowerCase().trim();
+    els.searchClearBtn.style.display = term ? 'flex' : 'none';
+    if (!term) {
+        renderRecipes(recipes);
+        return;
+    }
+    const filtered = recipes.filter(r =>
+        r.name.toLowerCase().includes(term) ||
+        r.category.toLowerCase().includes(term) ||
+        r.ingredients.some(ing => ing.toLowerCase().includes(term)) ||
+        r.variations?.some(v => v.ingredients?.some(ing => ing.toLowerCase().includes(term)))
+    );
+    renderRecipes(filtered);
+}
+
 els.searchInput.addEventListener('input', function () {
     clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => {
-        const term = this.value.toLowerCase().trim();
-        if (!term) {
-            renderRecipes(recipes);
-            return;
-        }
-        const filtered = recipes.filter(r =>
-            r.name.toLowerCase().includes(term) ||
-            r.category.toLowerCase().includes(term) ||
-            r.ingredients.some(ing => ing.toLowerCase().includes(term)) ||
-            r.variations?.some(v => v.ingredients?.some(ing => ing.toLowerCase().includes(term)))
-        );
-        renderRecipes(filtered);
-    }, 200);
+    searchTimer = setTimeout(performSearch, 200);
+});
+
+els.searchClearBtn.addEventListener('click', function () {
+    els.searchInput.value = '';
+    els.searchInput.focus();
+    clearTimeout(searchTimer);
+    performSearch();
 });
 
 renderRecipes(recipes);
