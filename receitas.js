@@ -444,7 +444,7 @@ Nota: para farinha de trigo, utilizar o copo Britânia cheio (240 ml) e a colher
         id: 12,
         name: "Pão de Fubá c/ Iogurte",
         category: "Pão",
-        image: "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-de-fuba-e-iogurte-38184.jpg",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_c_1OPaBH4v13QgAqO4AetDTCfd4G-kI5DO1k68hNvzu4cTUjA6vM1ZYx&s=10",
         ingredients: [
             "2 ovos (bater)",
             "1 copo de iogurte natural",
