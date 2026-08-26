@@ -66,7 +66,7 @@ function applyVariationContent() {
     const ingredients = variation?.ingredients || currentRecipe?.ingredients || [];
     const instructions = variation?.instructions || currentRecipe?.instructions || '';
     const mediaLink = variation?.mediaLink || currentRecipe?.mediaLink || '';
-    const description = variation?.description || '';
+    const description = variation?.description || currentRecipe?.description || '';
 
     els.modalIngredients.innerHTML = ingredients.map(ing => `<li>${ing}</li>`).join('');
     els.modalInstructions.textContent = instructions;
