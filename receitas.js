@@ -567,5 +567,38 @@ Dica: não amasse o abacate logo de início para evitar que perca líquido.
 3. Acrescente um pouco de molho de pimenta, sal a gosto, suco de limão e bastante coentro picado.
 
 4. Misture bem todos os ingredientes e amasse levemente até obter a consistência desejada. Sirva num prato acompanhado de tortilhas.`
+    },
+    {
+        id: 17,
+        name: "Panqueca Americana",
+        category: "Café da Manhã",
+        image: "https://static.itdg.com.br/images/640-400/34e48b244df56bb8c516375eb418ed45/panqueca-americana.jpg",
+        sourceLink: "https://www.tudogostoso.com.br/receita/13110-panqueca-americana.html",
+        description: "Preparar uma panqueca americana digna de cinema é uma ótima maneira de ter um café da manhã para lá de especial. Com a massa fofinha e doce, ela combina com geleias, mel, caldas, maple syrup, frutas, bacon ou ovos fritos.",
+        ingredients: [
+            "1 e 1/4 xícara (chá) de farinha de trigo",
+            "1 colher (sopa) de açúcar",
+            "3 colheres (chá) de fermento em pó químico",
+            "2 ovos levemente batidos",
+            "1 xícara (chá) de leite",
+            "2 colheres (sopa) de manteiga derretida",
+            "1 pitada de sal",
+            "Óleo para untar"
+        ],
+        instructions: `Rendimento: 8 porções
+Tempo de preparo: 40 minutos
+Utensílios: espátula, jarra medidora, panquequeira e prato de sobremesa
+
+1. Misture em um recipiente a farinha, o açúcar, o fermento e o sal.
+
+2. Em outro recipiente, misture os ovos, o leite e a manteiga.
+
+3. Acrescente os líquidos aos ingredientes secos, sem misturar em excesso.
+
+4. O ponto da massa não deve ser muito líquido; ela deve escorrer lentamente.
+
+5. Aqueça e unte a frigideira com óleo. Coloque a massa no centro, usando cerca de 1/4 de xícara por panqueca.
+
+6. Vire a massa para assar do outro lado e está pronto!`
     }
 ];
