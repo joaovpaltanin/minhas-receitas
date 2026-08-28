@@ -600,5 +600,35 @@ Utensílios: espátula, jarra medidora, panquequeira e prato de sobremesa
 5. Aqueça e unte a frigideira com óleo. Coloque a massa no centro, usando cerca de 1/4 de xícara por panqueca.
 
 6. Vire a massa para assar do outro lado e está pronto!`
+    },
+    {
+        id: 18,
+        name: "Arroz Branco Soltinho",
+        category: "Acompanhamento",
+        image: "https://images.ctfassets.net/qfxflpv0atz9/5kMck4AaQ4g7rP7yqHJSPR/460b2692048d2ffefa05aaddfa706eb8/como-fazer-arroz-branco-soltinho-capa.png?fm=webp&q=90",
+        mediaLink: "https://www.youtube.com/watch?v=zkOtkw0txRE",
+        ingredients: [
+            "Arroz cru (1 xícara de café por pessoa)",
+            "3 dentes de alho (ou a gosto)",
+            "40 ml de azeite",
+            "1 colher de louro em pó",
+            "Água quente (o dobro da quantidade de arroz)",
+            "Sal a gosto"
+        ],
+        instructions: `1. Não lave o arroz, pois isso libera amido, hidrata o grão antes da hora e atrapalha o processo de selagem.
+
+2. Em um triturador, bata o alho, o azeite e o louro em pó.
+
+3. Leve o tempero para uma panela e refogue rapidamente.
+
+4. Adicione o arroz cru e frite levemente no azeite temperado, envolvendo e tostando os grãos.
+
+5. Acrescente a água quente na proporção de duas medidas de água para cada medida de arroz e tempere com sal a gosto.
+
+6. Abaixe o fogo, deixe a tampa da panela levemente entreaberta e cozinhe por cerca de 15 minutos.
+
+7. Assim que a água secar, desligue o fogo, tampe a panela por completo e deixe descansar por 5 minutos sem mexer.
+
+8. Após o descanso, solte os grãos suavemente com um garfo e sirva.`
     }
 ];
