@@ -630,5 +630,33 @@ Utensílios: espátula, jarra medidora, panquequeira e prato de sobremesa
 7. Assim que a água secar, desligue o fogo, tampe a panela por completo e deixe descansar por 5 minutos sem mexer.
 
 8. Após o descanso, solte os grãos suavemente com um garfo e sirva.`
+    },
+    {
+        id: 19,
+        name: "Bolinho de Maçã",
+        category: "Saudável",
+        image: "https://i.ytimg.com/vi/M3QTardRyY0/hqdefault.jpg",
+        mediaLink: "https://youtube.com/shorts/M3QTardRyY0",
+        description: "Uma opção rápida, fofa e saudável perfeita para acompanhar o café da manhã ou da tarde dos adultos ou para compor a lancheira das crianças. É um bolinho leve, úmido e reconfortante.",
+        ingredients: [
+            "1 maçã (sem sementes)",
+            "1 ovo",
+            "100 g de iogurte grego ou iogurte natural",
+            "2 colheres de sopa de farinha de aveia (ou farelo de aveia)",
+            "½ colher de chá de fermento em pó",
+            "Canela em pó a gosto (opcional)",
+            "Noz-moscada ralada a gosto (opcional)",
+            "Gotas de chocolate a gosto (opcional)"
+        ],
+        instructions: `1. Triture a maçã (sem sementes) no mixer ou liquidificador até formar um purê.
+
+2. Em uma tigela, junte o purê de maçã, o ovo, o iogurte, a farinha de aveia e o fermento em pó. Misture bem até homogeneizar.
+
+3. Se desejar, acrescente a canela em pó, a noz-moscada ralada e as gotas de chocolate.
+
+4. Escolha um dos métodos de cozimento:
+- No micro-ondas: despeje a massa em uma caneca grande e asse por 3 minutos.
+- Na airfryer: despeje em forminhas de muffin e asse por 15 minutos.
+- No forno: despeje em forminhas de muffin e asse em forno pré-aquecido por 20 minutos.`
     }
 ];
