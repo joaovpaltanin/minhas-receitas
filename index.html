@@ -5,34 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Minhas Receitas — delícias caseiras feitas com carinho. Explore receitas culinárias.">
+    <meta name="theme-color" content="#e67e22">
     <title>Minhas Receitas</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧑‍🍳</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <div class="container header-inner">
-            <div class="header-text">
-                <h1>Minhas Receitas</h1>
-            </div>
+    <header class="site-header">
+        <div class="container">
+            <h1>Minhas Receitas</h1>
         </div>
     </header>
 
-    <div class="search-bar" id="searchBar">
-        <div class="container search-bar-inner">
-            <div class="search-container">
-                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="search-bar">
+        <div class="container">
+            <div class="search">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input type="text" id="searchInput" placeholder="Buscar por nome ou ingrediente...">
-                <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Limpar busca" title="Limpar busca" style="display:none">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <input type="search" id="searchInput" placeholder="Buscar por nome, ingrediente ou categoria..." aria-label="Buscar receitas" autocomplete="off" enterkeyhint="search">
+                <button type="button" class="search-clear" id="searchClear" aria-label="Limpar busca" title="Limpar busca" hidden>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
@@ -42,9 +40,10 @@
     </div>
 
     <main class="container">
+        <p class="results-count" id="resultsCount" aria-live="polite"></p>
         <div class="recipes-grid" id="recipesGrid"></div>
-        <div class="no-results" id="noResults" style="display: none;">
-            <svg class="no-results-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <div class="no-results" id="noResults" hidden>
+            <svg class="no-results-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 <line x1="8" y1="8" x2="14" y2="14"></line>
@@ -55,52 +54,60 @@
         </div>
     </main>
 
-    <div class="modal-overlay" id="modal">
+    <dialog class="modal" id="modal" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()" aria-label="Fechar">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <div class="modal-image-wrapper">
-                <img class="modal-image" id="modalImage" src="" alt="">
-                <div class="modal-image-gradient"></div>
-            </div>
+            <form method="dialog">
+                <button class="close-btn" aria-label="Fechar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </form>
+            <img class="modal-image" id="modalImage" src="" alt="" width="740" height="300">
             <div class="modal-body">
                 <div class="modal-header">
                     <h2 class="modal-title" id="modalTitle"></h2>
-                    <a class="media-btn" id="modalMediaLink" href="" target="_blank" rel="noopener noreferrer" aria-label="Assistir vídeo da receita">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-                        Vídeo da receita
-                    </a>
+                    <div class="modal-actions">
+                        <button type="button" class="share-btn" id="shareBtn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                            Compartilhar
+                        </button>
+                        <a class="media-btn" id="modalMediaLink" href="" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                            Vídeo da receita
+                        </a>
+                    </div>
                 </div>
-                <div class="modal-variations" id="modalVariations"></div>
-                <div class="variation-description" id="modalVariationDescription"></div>
 
-                <div class="section">
+                <div class="modal-variations" id="modalVariations" hidden></div>
+                <p class="modal-description" id="modalDescription" hidden></p>
+
+                <section class="section">
                     <h3 class="section-title">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
                         Ingredientes
                     </h3>
                     <ul class="ingredients-list" id="modalIngredients"></ul>
-                </div>
+                </section>
 
-                <div class="section">
+                <section class="section">
                     <h3 class="section-title">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
                         Modo de Preparo
                     </h3>
                     <div class="instructions" id="modalInstructions"></div>
-                </div>
+                </section>
+
+                <a class="source-link" id="modalSource" href="" target="_blank" rel="noopener noreferrer" hidden>Ver receita original ↗</a>
             </div>
         </div>
-    </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <footer>
-        <div class="container">
-            <p>Feito com <span class="heart">&#10084;</span> para amantes da cozinha</p>
-        </div>
+        <p>Feito com <span class="heart">&#10084;</span> para amantes da cozinha</p>
     </footer>
 
     <script src="receitas.js" defer></script>

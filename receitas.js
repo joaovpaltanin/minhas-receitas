@@ -658,5 +658,55 @@ Utensílios: espátula, jarra medidora, panquequeira e prato de sobremesa
 - No micro-ondas: despeje a massa em uma caneca grande e asse por 3 minutos.
 - Na airfryer: despeje em forminhas de muffin e asse por 15 minutos.
 - No forno: despeje em forminhas de muffin e asse em forno pré-aquecido por 20 minutos.`
+    },
+    {
+        id: 20,
+        name: "Quiche de Grão-de-Bico",
+        category: "Prato Principal",
+        image: "https://i.ytimg.com/vi/zs5kvINx4pM/hqdefault.jpg",
+        mediaLink: "https://www.youtube.com/watch?v=zs5kvINx4pM",
+        description: "Quiche sem farinha de trigo, com massa de grão-de-bico e recheio cremoso de alho-poró, tomilho e parmesão.",
+        ingredients: [
+            "500 g de grão-de-bico cozido",
+            "1 ovo (para a massa)",
+            "3 colheres (sopa) de azeite (para a massa)",
+            "1 colher (chá) de sal",
+            "1 colher (chá) de pimenta-do-reino",
+            "1 colher (sopa) de azeite (para o recheio)",
+            "1 cebola picada",
+            "2 dentes de alho picados",
+            "2 talos de alho-poró fatiados",
+            "Sal a gosto",
+            "1 colher (sopa) de tomilho",
+            "300 ml de creme de leite",
+            "200 g de parmesão ralado",
+            "1 ovo (para o recheio)",
+            "Pimenta-do-reino a gosto"
+        ],
+        instructions: `MASSA
+
+1. Pré-aqueça o forno a 180 ºC.
+
+2. No processador, bata o grão-de-bico cozido com o ovo, o azeite, o sal e a pimenta-do-reino até formar uma massa homogênea e moldável.
+
+3. Forre o fundo e as laterais de uma fôrma de fundo removível untada com a massa, pressionando com as mãos ou com uma colher.
+
+4. Asse somente a massa por cerca de 15 minutos, até ficar levemente firme.
+
+RECHEIO
+
+5. Em uma frigideira, aqueça o azeite e refogue a cebola até ficar transparente. Junte o alho e refogue por mais 1 minuto.
+
+6. Acrescente o alho-poró, tempere com sal e o tomilho e refogue até murchar. Desligue o fogo e deixe amornar.
+
+7. Em uma tigela, misture o creme de leite, o parmesão ralado, o ovo e a pimenta-do-reino. Junte o refogado de alho-poró e misture bem.
+
+MONTAGEM
+
+8. Despeje o recheio sobre a massa pré-assada.
+
+9. Volte ao forno a 180 ºC por cerca de 30 minutos, até o recheio firmar e a superfície dourar.
+
+10. Deixe amornar antes de desenformar e servir.`
     }
 ];
